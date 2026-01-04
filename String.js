@@ -14,3 +14,15 @@ const newString =gameName.substring(0,4)//ches
 console.log(newString)//ches
 const anotherString=gameName.slice(0,4)//this is same as substring but it will use negative index also and gives answer excluding last index
 console.log(anotherString)
+const newString1= gameName.slice(-3,-1)//es 
+console.log(newString1)
+const newString2=" Pratik "
+console.log(newString2)
+console.log(newString2.trim())//pratik //it will remove all white spaces from string
+const url ="www.pratik@com";
+console.log(url.replace('@','.'))//it will replace @ with . in String.
+console.log(url.includes('pratik'))//true // it will check whether 
+//pratik is present or not in url String
+let str1="hello_Pratik_Coder"
+console.log(str1.split('_'))//['hello','Pratik','Coder']
+//it will conver String into array based on given separator charecter.
