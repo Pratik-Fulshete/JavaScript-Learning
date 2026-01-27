@@ -72,4 +72,17 @@ console.log(users[1].userName) //accessing object inside array
 console.log(Object.keys(tinderUser)) //it will gives array of keys
 console.log(Object.values(tinderUser))// it will gives array of values
 console.log(Object.entries(tinderUser))//it will gives array of [key, value] pairs means entries
-console.log(tinderUser.hasOwnProperty("name"))//it checks whether given key is present or not in object , it will gives answer in boolean (true/false).
+console.log(tinderUser.hasOwnProperty("name"))//it checks whether given key is present or not in object , it will gives answer in boolean (true/false)
+const course ={
+    cousename :"Js in Hindi",
+    price :"999",
+    courseInstructor:"Pratik"
+}
+const {courseInstructor : instructor } = course // object destructuring
+console.log(instructor) 
+//renaming while destructuring
+{
+    "name":"hitesh",
+    "Age":"20"
+
+}//it is json format (JavaScript Object Notation)
