@@ -1,0 +1,23 @@
+Call Stack
+Types of Execution Context
+1. Global Execution Context
+2.Function Execution Context
+3.Eval Execution Context
+
+Steps of code Execution:-
+1. Global Execution runs code and memory allocate in this
+2. Memory Creation Phase 
+places all variables assign values  as undefined ex. val1 = undefined
+for functions assign defination ex addnum = defination
+3.Exection Phase
+assign all user values to variables ex.val1 = 10
+for function create new memory in that memory two area or enviroment new variable enviroment
+and Exection thread.for that function repeats two phase again in new variable enviroment
+memory phase , Execution phase and return answer to  Global execution phase after that delete that 
+when ever function call again then repeats process again
+
+call Stack
+here 
+ one stack is created in bottom of stack have Global execution Context 
+ after that stores function call and follow algorithm LIFO (Last In First Out)
+
