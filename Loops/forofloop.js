@@ -1,7 +1,7 @@
 //this loop is arrays speccific loop in java script 
 const arr = [1,2,3,4,5]
 for(const num of arr){
-    //console.log(num);
+   // console.log(num);
 }
 
 //Maps 
@@ -17,7 +17,7 @@ map.set('IN',"India")
 //console.log(map)
 
 
-for(const [key,value] of map){ // here we can write like const key of map
+for(const [key,value] of map){ // here we can write like const key of map //for of loop
 console.log(key,':',value)
 
 
