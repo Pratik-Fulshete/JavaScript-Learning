@@ -1,0 +1,30 @@
+                                      Window
+                                        |
+                                      Document
+                                        |
+                                       HTML
+                                 |           |
+                                Head        Body
+                                /  \          |
+                            title  Meta      div-- attribute
+                              |     |          \
+                            text   attribute   h1  p---text node
+                            node              |  |-text node
+                                          attribute
+notes
+document - it is global object in js . it refers full web page . using this we can manipulate webpages
+
+methods
+document.getElementbyId - it is select given id part from webpages 
+
+innerHtml - we can use along with documents method. using we can modify html from js.
+
+document.getElementById('id name') = its gives particular id part
+document.getElementById('id name').id = its give id name
+document.getElementById('id name').className = its give class name
+document.getElementById('id name').getAttribute('attribute type'//id, class, style etc) = its give selected attribute
+document.getElementById('id name').setAttribute('attribute type','attribute name') = its set attribute and attribute name
+
+const head = document.getElementById('id name')  = we can store in variable also
+ use of storing in variable:-
+ head.style.bacground-color:'green' = we can add like this all style.
