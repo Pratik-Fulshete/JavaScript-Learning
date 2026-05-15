@@ -27,4 +27,5 @@ document.getElementById('id name').setAttribute('attribute type','attribute name
 
 const head = document.getElementById('id name')  = we can store in variable also
  use of storing in variable:-
- head.style.bacground-color:'green' = we can add like this all style.
+ head.style.background-color='green' = we can add like this all style.
+ innerText , innerContent, innerHtml
