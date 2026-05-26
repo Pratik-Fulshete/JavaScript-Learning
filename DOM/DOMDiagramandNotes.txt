@@ -29,3 +29,53 @@ const head = document.getElementById('id name')  = we can store in variable also
  use of storing in variable:-
  head.style.background-color='green' = we can add like this all style.
  innerText , innerContent, innerHtml
+
+ querySelector 
+ document.querySelector('input[type="password"]') = its selects whole tag
+ const turnGreen = myul.querySelector('li') = we can select value / tags like also
+ 
+ querySelectorAll
+
+ its select all tags  in webpage  gives output as nodelist  
+ nodelist = it is look like array but working is different
+ use = const templi = document.querySelectorAll('li')
+templi
+NodeList(3) [li, li, li]  if we want modify all element we can't modify
+templi.style.color = "red" => not allowed
+templi[0].style.color = "red" => allowed and working
+
+for single tag it gives nodelists
+const templi = document.querySelectorAll('li')
+templi
+NodeList(3) [li, li, li]
+templi.forEach(function (l) { l.style.backgroundColor = 'green'})  
+we also use forEach loop with nodelist  
+we can't use arrays functionlity like map , push , pop like others functions
+
+document.getElementbyClassName => 
+
+it select element by Class Name . it gives output in HtmlCollection
+templist = document.getElementsByClassName('list')
+HTMLCollection(3) [li.list, li.list, li.list] => HTMLCollection
+
+HTMLCollection => we can't use foreach on it. simple loop we can use
+ that why we convert HTMLCollection into Array.
+ const myConvertArray = Array.from(templist)  => converting into Array Using from() function
+undefined
+myConvertArray
+(3) [li.list, li.list, li.list]0: li.list1: li.list2: li.listlength: 3[[Prototype]]: Array(0)
+myConvertArray.forEach(function (ele) { ele.style.color ="orange"
+    
+}) => we can use all functionality of array and loops with html collection
+
+New Element Creation :-
+document.createElement => use to create new Elements 
+ex: const div = document.createElement('div')
+
+appendChild => it is appends child Or Join created new element to Parent Elements
+ex: const addText = document.createTextNode("Pratik")// create actul item
+    div.appendChild(addText) 
+CreateTextNode => it is create new text Node 
+
+document.body.appendChild(div) : using this we can see all changes on Webpage 
+

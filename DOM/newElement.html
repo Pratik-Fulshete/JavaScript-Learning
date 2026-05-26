@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom New Element creation</title>
+</head>
+<body>
+    <div class="Parent">
+        <!-- -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+</body>
+<script>
+   const parent= document.querySelector('.Parent')
+   console.log(parent)
+   console.log(parent.children)
+   console.log(parent.children[1].innerHTML)
+   /*for (let i = 0 ; i < parent.children.length;i++){
+    console.log(parent.children[i].innerHTML);
+   }*/
+parent.children[1].style.color="orange"
+//parent to child
+//console.log(parent.firstElementChild);//its select 1st child element in parent node list 
+//console.log(parent.lastElementChild);//its select last child element in parent  node list
+ //child to parent
+ const dayOne = document.querySelector('.day')
+ console.log(dayOne);
+ //every time use querselector use is expensive way becoze it traverse all tree of Dom
+console.log(dayOne.parentElement); //gives  parent element
+console.log(dayOne.nextElementSibling) // gives next element
+console.log("Nodes :",parent.childNodes)//gives or count all Nodes
+
+</script>
+</html>
