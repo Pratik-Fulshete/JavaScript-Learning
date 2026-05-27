@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <ul class="lang">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    //Adding
+    function addLang(langName){
+        const li = document.createElement('li')
+        li.innerHTML=`${langName}`
+        document.querySelector('.lang').appendChild(li)
+
+    }
+    addLang("Python")
+    addLang("Java")
+
+    function addOptiLang(lang){ //it is best way optimization
+       const li = document.createElement('li')
+       li.appendChild(document.createTextNode(lang))
+       document.querySelector('.lang').appendChild(li)
+    }
+    addOptiLang('goLang')
+    //Edit
+    const Secondlang = document.querySelector("li:nth-child(2)")// nth-child() => it is select given number child
+   //here select whole tag <li>---</li>
+    //Secondlang.innerHTML="Mojo"
+    const newli = document.createElement('li')
+    newli.textContent="Mojo";
+    Secondlang.replaceWith(newli) //using this function we edit/replace existing element
+    
+    const firstLang = document.querySelector("li:first-child") //it is select 1st child
+    firstLang.outerHTML = '<li>typeScript</li>'
+
+    //remove 
+    const lastlang = document.querySelector("li:last-child") // it is select last child
+    lastlang.remove() // it is remove element 
+    //stackbitlz
+    
+</script>
+</html>
