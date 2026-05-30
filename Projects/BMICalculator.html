@@ -8,7 +8,21 @@
 <body>
 <div class="Container">
     <h1>BMI calculator</h1>
+    <form>
+        <p><label for="weight">Weight (kg):</label> <input type="number" id="weight" name="weight" ></p>
+        <p><label for="height">Height (cm):</label> <input type="number" id="height" name="height" ></p>
+        <button type="submit">Calculate BMI</button>
+        <div id="result"></div>
+        <div id="Weight-guide">
+            <h3>BMI Weight Guide</h3>
+            <p>Under Weight = Less than 18.6</p>
+            <p>Normal Weight = 18.6 - 24.9</p>
+            <p>Over Weigth = Greater than 24.9</p>
+
+        </div>
+    </form>
     
 </div>
 </body>
+<script src="BMI.js"></script>
 </html>
