@@ -1,0 +1,45 @@
+ways of writing events
+1.  <li><img width="200px" id="stone" src="images/stone.png" alt="" onclick="alert('stone')"></li>
+2. <script>
+    document.getElementById('stone').onclick = function(){
+        alert("stone")
+    }
+</script>
+3. document.getElementById('stone').addEventListener('click', function(){
+    alert("stone")
+   },false)  using this we add different types events 
+   addEventListener('event type', function(){here we write code what change we want after event triggered})
+   this is best way 
+also we use attachEvent() method  
+event is a object 
+type , timestamp , defaultPrevented 
+target , toElement , srcElement , Current target
+clientX , clientY , screenX , screenY , altkey , ctrlkey , shiftkey , keycode  
+Imp elements 
+ Event Propogations :- 
+ there are two types of Propogations
+ 1. bubbling : here we use false (this is default value)
+ ex: document.getElementById('images').addEventListener('click', function(e){
+    console.log("clicked inside ul")
+   },)
+    document.getElementById('stone').addEventListener('click', function(e){
+    console.log("clicked inside stone")
+   },false) 
+   here firstly apply events inner elements and later outter elements
+
+2. capturing : here we use true 
+document.getElementById('images').addEventListener('click', function(e){
+    console.log("clicked inside ul")
+   },true)
+    document.getElementById('stone').addEventListener('click', function(e){
+    console.log("clicked inside stone")
+   },true)
+    here firstly apply events outter elements and later inner elements
+
+    using e.stopPropagation():
+    we stop Propogations
+    ex:
+    document.getElementById('stone').addEventListener('click', function(e){
+    console.log("clicked inside stone")
+    e.stopPropagation()
+   },)

@@ -25,7 +25,7 @@ if(isNaN(guess)){
 }else if(guess < 1 || guess > 100){
     alert('Please enter a number between 1 and 100')
 }else{
-    prevGuess.push(guess)
+   // prevGuess.push(guess)
     if(numGuess === 11){
         displayGuess(guess)
         displayMessage(`Game Over! random number was ${randomNumber}`)

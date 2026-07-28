@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+</head>
+<body style="background-color: black;">
+    <h2> Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="Java" src="images/DALL·E 2025-03-08 17.11.01 - A sleek, dark mode Java logo design with a glowing effect. The logo features the iconic coffee cup with steam, set against a black or dark gradient ba.jpg" alt=""></li>
+            <li><img width="200px" id="paper" src="images/paper.png" alt=""></li>
+            <li><img width="200px" id="scissors" src="images/scissors.png" alt=""></li>
+            <li><img width="200px" id="stone" src="images/stone.png" alt="" ></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //document.getElementById('stone').onclick = function(){
+      //  alert("stone")
+   // }
+ /* document.getElementById('images').addEventListener('click', function(e){
+    console.log("clicked inside ul")
+   },)
+    document.getElementById('stone').addEventListener('click', function(e){
+    console.log("clicked inside stone")
+    e.stopPropagation()
+   },)
+   document.getElementById('google').addEventListener('click', function(e){
+    e.stopPropagation()
+    e.preventDefault()
+    console.log("clicked google")
+   },)*/
+   document.querySelector('#images').addEventListener('click', function(e){
+     // console.log(e.target) //target gives targetted elements
+     /*console.log(e.target.parentNode) // parentNode value gives parent element or select 
+    let removeIt = e.target.parentNode
+    removeIt.remove() // it remove selected element or tag  
+    //here it apply parenNode means Ul tag
+    //removeIt.parentNode.removeChild(removeIt) // it is remove child element or tag 
+    // here it apply only img  tag*/
+    console.log(e.target.tagName); //it is gives tagName of selected elements
+    let tagname = e.target.tagName;
+    if(tagname === 'IMG'){
+        console.log(e.target.id) // it is gives id name of selected tag or elements
+   let removeIt = e.target.parentNode
+    removeIt.remove()
+    }
+   } )
+</script>
+</html>
