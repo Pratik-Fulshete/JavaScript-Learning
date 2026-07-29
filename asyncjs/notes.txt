@@ -1,0 +1,33 @@
+Javascript is Synchronous langauge 
+Synchronous means code run line by line , one code after second code.
+Javascript is single threaded.
+All of this default Js behaviour.
+Blocking code:-
+Block the  flow  of program
+read file Synchronous way
+
+Non Blocking code :-
+Does Not block execution
+read file Asynchronous way
+
+Js engine -> 1) Memory Heap       2) Call Stack  
+                                                          web API
+                                               call      1. Dom API
+                                         fn1   ->        2.Set timeout  ->  
+                                                         3.Set intervel    |
+                                        fn2              4.fetch()         Register
+                                                                             Call Back
+                                      global      |       cB cB             < --|
+                                                    - - -    task Queue
+                                                    Add to Call
+                                                    Stack
+                        
+setTimeout(operations, time in millseconds):- here pose the execution for given time and after that executes given opertions
+clearTimeout (reference of setTimeOut):- this method cancel the timeout. 
+ex.const cleartimeout =setTimeout(changeTxt, 3000)
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearTimeout(cleartimeout);
+            console.log('stopped');
+        });
+setIntervel(operations, time in millseconds, third Parameter) :- this method stop pose the execution for given time 
+after that complete task  and repet again and again after given time.

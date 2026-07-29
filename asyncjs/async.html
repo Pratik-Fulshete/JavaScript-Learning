@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Code With Pratik</h1>
+    <button id="stop"> Stop</button>
+    <script>
+       const msg= function(){
+            console.log("Pratik")
+        }
+        const changeTxt = function (){
+            document.querySelector('h1').innerHTML="Best Of Luck"
+        }
+        const cleartimeout =setTimeout(changeTxt, 3000)
+        setTimeout(msg,2000)
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearTimeout(cleartimeout);
+            console.log('stopped');
+        })
+        
+
+    </script>
+</body>
+</html>

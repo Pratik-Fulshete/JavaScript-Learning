@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async1</title>
+</head>
+<body>
+     <h1>Code With Me</h1>
+     <button id="start">Start</button>
+    <button Id="stop"> Stop</button>
+    <script>
+        const msg = function(){
+            console.log("Pratik",Date.now(),"hi")
+        }
+        let Id=1;
+         function intervel(){  Id = setInterval(msg,1000)}
+        document.querySelector('#start').addEventListener('click', function(){
+            console.log("started")
+            intervel();
+            })
+
+            document.querySelector('#stop').addEventListener('click', function(){
+             clearInterval(Id)
+             console.log("stopped")
+            })
+    </script>
+</body>
+</html>
