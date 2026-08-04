@@ -27,3 +27,13 @@ it is represent current state of http request . it have five stage 0 to 4
 json string 
 
 6. JSON.parse() : this method converts json string into javascript object
+
+7. send() : this method is used to send http request to server 
+           it called using XMLHttpRequest object 
+           it takes zero parameters
+
+V8 engine :(it is devloped using c++)
+v8 engine gives devtools
+it is gives console log
+js is wrapper on c++
+

@@ -1,0 +1,8 @@
+Before promise people use Q and bluebird library
+Promises introdued in ES6
+
+Promise:-
+promise means given task is not complete on time that(invetaul operations) ,
+takes time or completes later. it  is a object 
+
+** promise creation
