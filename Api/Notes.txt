@@ -1,0 +1,29 @@
+random user api - website for api 
+https://api.github.com/users  - github api
+https://json-indent.com/ - json formatter website
+
+***********************************************************************************
+1. XMLHttpRequest() :
+it is a class that is used to create an XMLHttpRequest object. 
+which is allows to send Http request.
+
+2.Open() :  this method is called using aboves methods object
+using this we send request to the server and it takes two
+ parameters one is request type(Get, Put ,Post) and second is url(api)
+
+3.onreadystatechange : onreadystatechange is an event handler that is called when the readystate property of the XMLHttpRequest object changes. 
+ it is used to track the progress of the request and handler .
+ here we write function for to handle requests and for performing operations.
+
+4.readystate : it is  a property of XMLHttpRequest object 
+it is represent current state of http request . it have five stage 0 to 4
+0 = not initilized
+1 = request setup
+2 = request sent 
+3 = request process
+4 = request complete
+
+5. this.responseText : it is property of XMLHttpRequest that contains response as 
+json string 
+
+6. JSON.parse() : this method converts json string into javascript object
