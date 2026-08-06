@@ -4,5 +4,22 @@ Promises introdued in ES6
 Promise:-
 promise means given task is not complete on time that(invetaul operations) ,
 takes time or completes later. it  is a object 
+promise is a object that is used to haandle async task and 
+it is used to handle future value
+do all async task that takes time to complete
+ //DB call , crypto call,API call, file read
 
 ** promise creation
+1: const promise1 = new Promise(function(resolve,reject){async task})
+2: promise1.then(function(){}): // it excutes after  promise  complete async task
+we can write multiple then()
+3:promise1.then().catch:(function(){ it is executes after promise is failed complete async task})
+4:resolve(): it is part of promise . it is necessary to call to executes async task in
+promises. using this we send values to then()
+5: reject(): it is also part of promise .if async task is not resolve or executs 
+then that is works . here we right error msg or task . this is send data or msg to catch
+6:promise1.then().catch(function(){}).finally(()=>{}) 
+finally executes in any condition promise is failed or success
+
+** async and await :
+async is function level keyword we use when 

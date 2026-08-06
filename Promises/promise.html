@@ -11,10 +11,10 @@
         //promise creation 
         //promise is a object that is used to haandle async task and it is used to handle future value
         const promise1 = new Promise(function(resolve,reject){
-            //do all async takes  time to complete
+            //do all async task that takes time to complete
             //DB call , crypto call,API call, file read
             setTimeout(()=>{
-                console.log("Async task 1 is complete")
+                //console.log("Async task 1 is complete")
                 resolve()
             },1000)
         })
@@ -22,16 +22,16 @@
         //promise consumtion
 
         promise1.then(function(){
-            console.log("Promise consumed")
+           // console.log("Promise consumed")
         })
     //promise 2
         new Promise((resolve,reject)=>{
             setTimeout(()=>{
-                console.log("async task 2 is complete")
+               // console.log("async task 2 is complete")
             },2000)
             resolve()
         }).then((value)=>{
-              console.log("promise 2 consumed")
+              //console.log("promise 2 consumed")
         }) 
 //promise 3
 //Data consumption
@@ -41,9 +41,64 @@
     },1000)
  })
  promise3.then((data)=>{
-    console.log("promise 3 consumed", data)
+   // console.log("promise 3 consumed", data)
  })
+
+ const promise4 = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error = false
+        if(!error){
+            resolve({userName:"Pratik",userAge:23,userCity:"XYZ"})
+        }else{
+            reject("Error Detects!")
+        }
+    },2000)
+ })
+/* promise4.then((user) => {
+    console.log(user)
+    return user.userAge 
+ }).then((userAge) => {
+    console.log(`user age is ${userAge}`)  
+ }).catch((error)=>{
+    console.log(error)
+    console.log(1)
+ }).finally(()=>{
+    console.log("error or complete")
+ })*/
+ //async await
+ const promise5 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{ let error = true
+        if(!error){
+            resolve({userName:"Pratik",userAge:23,userCity:"XYZ"})
+        }else{
+            reject("Error Detects!")
+        }
+
+    },1000)
+ })
+async function consumeProfive(){
+    try {
+        const response = await promise5
+        console.log(response)
         
+    } catch (error) {
+        console.log(error)
+    }
+
+}
+consumeProfive()
+
+async function githubUsers(Url) {
+       try{
+        const response = await fetch(Url)
+        const data =await response.json()
+        console.log(data)
+       }catch(error){
+   console.log("E:",error)
+       }
+} 
+    githubUsers('https://api.github.com/users')
+
     </script>
 </body>
 </html>
