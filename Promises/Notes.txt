@@ -22,4 +22,7 @@ then that is works . here we right error msg or task . this is send data or msg 
 finally executes in any condition promise is failed or success
 
 ** async and await :
-async is function level keyword we use when 
+async is function level keyword use when we want to do async time taking operation
+
+await is a keyword we write with async operations statement
+ ex:- await async operation statement

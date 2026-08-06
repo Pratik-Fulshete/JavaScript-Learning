@@ -88,7 +88,7 @@ async function consumeProfive(){
 }
 consumeProfive()
 
-async function githubUsers(Url) { //async 
+async function githubUsers(Url) { 
        try{
         const response = await fetch(Url)
         const data =await response.json()
@@ -97,7 +97,16 @@ async function githubUsers(Url) { //async
    console.log("E:",error)
        }
 } 
-    githubUsers('https://api.github.com/users')
+  //  githubUsers('https://api.github.com/users')
+
+  // then and catch
+  fetch('https://api.github.com/users').then((response) => {
+    return response.json()
+  }).then((data) => {
+    console.log(data)
+  }).catch((error) => {
+    console.log(error)
+  })
 
     </script>
 </body>
