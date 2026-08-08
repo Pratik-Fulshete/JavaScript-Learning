@@ -1,0 +1,18 @@
+** OOP
+- it is programming paradigam
+** Object 
+- collection of properties and methods
+- toLower case
+
+** Why use OOP
+
+* Constructor function
+* Prototypes
+* Classes
+* Instances (new , this)
+
+** 4 pillars
+Abstraction 
+Encapsulation
+Inheritance
+Polymorphism
