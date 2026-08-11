@@ -16,3 +16,13 @@ Abstraction
 Encapsulation
 Inheritance
 Polymorphism
+
+** Constructor function :-
+new :- first creates empty object (instance)
+       then call Constructor function because of new keyword it packs all arguments and give it.
+       all argument value is injects into this keyword
+       In last we get all values we want
+
+instanceOf() :- use we can check instance is same of different 
+
+

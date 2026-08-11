@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Study</title>
+</head>
+<body>
+    <h1>Prototype :-</h1>
+    <p>
+       1: Js is a prototype behavioral lang. 
+       2: Every object in Js has a prototype, which is another object that serves as a template for creating new objects.
+        ex: Array ->Object -> null
+            string -> Object -> null
+            function -> Object -> null
+
+
+    </p>
+</body>
+<script>
+    function multiplyBy5(num){
+        this.num = num;
+        return num*5;
+    }
+     multiplyBy5.power =2
+     console.log(multiplyBy5(5))
+     console.log(multiplyBy5.power)
+     console.log(multiplyBy5.prototype)
+    function createUser(userName, score){
+        this.userName =userName;
+        this.score=score;    
+
+    }
+    createUser.prototype.increment = function(){
+        this.score++;
+    }
+     const chai = new createUser("chai",25)//imp of new keyword in js if not use then it will return undefined error
+     const tea = new createUser("tea",300)
+     createUser.prototype.printScore = function(){
+        console.log(`name is ${this.userName} and score is ${this.score}`)
+     }
+     chai.printScore()
+</script>
+</html>
